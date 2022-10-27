@@ -1,17 +1,20 @@
 const mongoose = require("mongoose");
+const mongodbErrorHandler = require('mongoose-mongodb-errors');
 
-const sauceSchema = mongoose.Schema({
+mongoose.plugin(mongodbErrorHandler);
+
+const sauceSchema = new mongoose.Schema({
     userId: { type: String, required: true },
     name: { type: String, required: true },
     manufacturer: { type: String, required: true },
-    description: { type: String, requires: true },
-    mainPepper: { type: String, requires: true },
-    imageUrl: { type: String, requires: true },
-    heat: { type: Number, requires: true },
-    likes: { type: String, requires: true },
-    dislikes: { type: String, requires: true },
-    usersLiked: { type: [String], required: true },
-    usersDisliked: { type: [String], rquired: true }
+    description: { type: String, required: true },
+    mainPepper: { type: String, required: true },
+    imageUrl: { type: String, required: true },
+    heat: { type: Number, required: true },
+    likes: { type: Number },
+    dislikes: { type: Number },
+    usersLiked: { type: [String] },
+    usersDisliked: { type: [String] }
 })
 
 module.exports = mongoose.model("Sauce", sauceSchema);
