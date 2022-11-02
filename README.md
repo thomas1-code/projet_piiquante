@@ -25,3 +25,52 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Cloner le projet avec le lien suivant
+
+https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6
+
+## Dans le dossier racne du projet
+
+exécuter la commande "npm install"
+
+## S'il y a des problèmes de vulnérabilité
+
+exécuter la commande "npm audit-fix"
+
+## Si les problèmes de vulnérabilité persistent
+
+exécuter la commande "npm audit-fix --force"
+
+## Pour vérifier s'il n'y a plus de problème
+
+exécuter la commande "npm audit"
+
+## Pour mettre à jour Angular
+
+exécuter la commande"ng update @angular/cli"
+
+## Pour mettre à jour le "core"
+
+exécuter la commande "ng update @angular/core"
+
+## Si la mise à jour du "core" a échouée
+
+exécuter la commande "ng update @angular/core --force
+
+## Pour mettre à jour "rxjs"
+
+exécuter la commande "ng update rxjs"
+
+## Pour lancer le serveur côté frontend
+
+exécuter la commande "npm run start"
+
+## Pour lancer le serveur côté backend
+
+exécuter la commande "cd backend"
+puis exécuter la commande "npm server" ou "nodemon server" 
+
+## L'adresse du serveur
+
+"http://localhost:4200/
