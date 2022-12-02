@@ -26,51 +26,32 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-# Cloner le projet avec le lien suivant
+# API Errors
 
-https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6
+Les erreurs éventuelles doivent être renvoyées telles qu'elles sont produites, sans
+modification ni ajout. 
 
-## Dans le dossier racne du projet
+# API Routes
 
-exécuter la commande "npm install"
+Toutes les routes sauce pour les sauces doivent disposer d’une autorisation (le
+token est envoyé par le front-end avec l'en-tête d’autorisation : « Bearer <token> »).
+Avant que l'utilisateur puisse apporter des modifications à la route sauce, le code
+doit vérifier si l'userId actuel correspond à l'userId de la sauce. Si l'userId ne
+correspond pas, renvoyer « 403: unauthorized request. » Cela permet de s'assurer
+que seul le propriétaire de la sauce peut apporter des modifications à celle-ci.
 
-## S'il y a des problèmes de vulnérabilité
+# Exigences de sécurité
 
-exécuter la commande "npm audit-fix"
-
-## Si les problèmes de vulnérabilité persistent
-
-exécuter la commande "npm audit-fix --force"
-
-## Pour vérifier s'il n'y a plus de problème
-
-exécuter la commande "npm audit"
-
-## Pour mettre à jour Angular
-
-exécuter la commande"ng update @angular/cli"
-
-## Pour mettre à jour le "core"
-
-exécuter la commande "ng update @angular/core"
-
-## Si la mise à jour du "core" a échouée
-
-exécuter la commande "ng update @angular/core --force
-
-## Pour mettre à jour "rxjs"
-
-exécuter la commande "ng update rxjs"
-
-## Pour lancer le serveur côté frontend
-
-exécuter la commande "npm run start"
-
-## Pour lancer le serveur côté backend
-
-exécuter la commande "cd backend"
-puis exécuter la commande "npm server" ou "nodemon server" 
-
-## L'adresse du serveur
-
-"http://localhost:4200/
+● Le mot de passe de l'utilisateur doit être haché.
+● L'authentification doit être renforcée sur toutes les routes sauce requises.
+● Les adresses électroniques dans la base de données sont uniques et un
+plugin Mongoose approprié est utilisé pour garantir leur unicité et signaler
+les erreurs.
+● La sécurité de la base de données MongoDB (à partir d'un service tel que
+MongoDB Atlas) ne doit pas empêcher l'application de se lancer sur la
+machine d'un utilisateur.
+● Un plugin Mongoose doit assurer la remontée des erreurs issues de la base
+de données.
+● Les versions les plus récentes des logiciels sont utilisées avec des correctifs
+de sécurité actualisés.
+● Le contenu du dossier images ne doit pas être téléchargé sur GitHub.
